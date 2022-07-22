@@ -1,0 +1,267 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">  
+  <form class="contact" action="" method="post">   
+    <div class="col50 colleft">
+      <div class="col50 colleft">
+        <div class="wd50">
+
+                <h2 class="text-uppercase text-center mb-5">Registro de Pacientes de Urgencias</h2>
+
+                    <form action="" method="POST">
+                            {% csrf_token %}
+                            
+
+<div class="container">  
+  <form class="contact" action="" method="post">
+    <h3>Registro</h3>
+    
+    <div class="col50 colleft">
+      <div class="col50 colleft">
+        <div class="wd50">
+          {{form.Expediente.label}}
+          {{form.Expediente}}
+        </div>
+        <div class="wd50">
+          {{form.NumeroCuenta.label}}
+          {{form.NumeroCuenta}}
+        </div>
+      </div>
+      <div class="col50 colright">
+        <div class="wd50">
+          {{form.FechaIngreso.label}}
+          {{form.FechaIngreso}}
+        </div>
+        <div class="wd50">
+          {{form.HoraIngreso.label}}
+          {{form.HoraIngreso}}
+        </div>
+      </div>
+    </div>
+    
+    <div class="col50 colright">
+      <div class="col50 colleft">
+        <div class="wd50">
+          {{form.FechaEgreso.label}}
+          {{form.FechaEgreso}}
+        </div>
+        <div class="wd50">
+          {{form.HoraEgreso.label}}
+          {{form.HoraEgreso}}
+        </div>
+      </div>
+      <div class="col50 colright">
+        <div class="wd50">
+          {{form.DiasEstancia.label}}
+          {{form.DiasEstancia}}
+        </div>
+      </div>
+    </div>
+    
+    <div class="wd100"><hr></div>
+    
+    <div class="col50 colleft">
+      <div class="wd50">
+        {{form.NombrePaciente.label}}
+        {{form.NombrePaciente}}
+      </div>
+      <div class="col50 colright">
+        <div class="wd100">
+          {{form.sexo.label}}
+          {{form.sexo}}
+        </div>
+      <div class="wd100">
+        {{form.LugarEgreso.label}}
+        {{form.LugarEgreso}}
+      </div>
+    </div>
+  </div>
+    <div class="wd100"><br>
+        {{form.FechaNacimiento.label}}
+        {{form.FechaNacimiento}}
+    </div>
+  </div>
+    
+    <div class="wd100"><hr></div>
+    
+    <div class="wd100">
+      {{form.TipoAtencion.label}}
+      {{form.TipoAtencion}}
+    </div>
+    
+    <div class="wd100">
+      {{form.TipoPaciente.label}}
+      {{form.TipoPaciente}}
+    </div>
+
+    <div class="wd100 question-checkbox">
+      <div class="col50 colleft">
+        
+        {{form.TipoIngreso.label}}
+        {{form.TipoIngreso}}
+
+        <div class="col50 colleft">
+        
+          {{form.Empresa.label}}
+          {{form.Empresa}}
+ 
+        <div class="col50 colleft">
+        
+          {{form.ServicioPrestado.label}}
+          {{form.ServicioPrestado}}
+
+        <div class="col50 colleft">
+        
+          {{form.Cuarto.label}}
+          {{form.Cuarto}}
+
+        <div class="col50 colleft">
+        
+        {{form.Cirugia.label}}
+        {{form.Cirugia}}
+        <br>
+        <div class="col50 colleft">
+        {{form.MedicoTratante.label}}
+        {{form.MedicoTratante}}
+        <div class="col50 colleft">
+          {{form.Especialidad.label}}
+          {{form.Especialidad}}
+        <div class="col50 colleft">
+          {{form.MedInterconsultante.label}}
+          {{form.MedInterconsultante}}
+        <br>
+          {{form.MedicoAnestesiologo.label}}
+          {{form.MedicoAnestesiologo}}
+        <br> 
+         <p>
+          {{form.TipoAnestesia.label}}
+          {{form.TipoAnestesia}}
+        </p>
+          </p>
+         <p>
+          {{form.Diagnostico.label}}
+          {{form.Diagnostico}}
+          </p>
+          <p>
+          {{form.Cie10.label}}
+          {{form.Cie10}}
+        </p>
+        
+        <p>
+          {{form.DiagnosticoCIE10.label}}
+          {{form.DiagnosticoCIE10}}
+        </p>
+
+        <p>
+          {{form.Recoi.label}}
+          {{form.Recoi}}
+        </p>
+        
+
+        <p>
+          {{form.DiagnosticoRecoi.label}}
+          {{form.DiagnosticoRecoi}}
+        </p>
+        
+      </div>
+
+      <div class="col50 colright">
+        <p> 
+          {{form.Procedimiento.label}}
+          {{form.Procedimiento}}
+        </p>
+
+        <p>
+          {{form.FechaCirugia.label}}
+          {{form.FechaCirugia}}
+        </p>
+        <p>
+          {{form.EgresoUrgencias.label}}
+          {{form.EgresoUrgencias}}
+        </p>      
+
+        <p>
+          {{form.NacidoVivo.label}}
+          {{form.NacidoVivo}}
+        </p>
+
+        <p>
+          {{form.TallaRN.label}}
+          {{form.TallaRN}}</p>
+     
+        <p>
+          {{form.PesoRN.label}}
+          {{form.PesoRN}}
+        </p>
+
+        <p>
+          {{form.MamaRN.label}}
+          {{form.MamaRN}}
+        </p>
+
+        <p>
+          {{form.SalpingoPuerperio.label}}
+          {{form.SalpingoPuerperio}}
+        </p>
+
+        <p>
+          {{form.MotivoEgreso.label}}
+          {{form.MotivoEgreso}}
+        </p>
+      
+        <p>
+          {{form.EgresoCensable.label}}
+          {{form.EgresoCensable}}
+        </p>
+        
+        <p>
+          {{form.Reingreso.label}}
+          {{form.Reingreso}}
+        </p>
+        <p>
+          {{form.MotivoReingreso.label}}
+          {{form.MotivoReingreso}}
+        </p>
+      </div>
+    </div>
+
+    <div class="col50 colleft">
+      <div class="wd100">
+        {{form.Certificado.label}}
+        {{form.Certificado}}
+      </div>
+    </div>
+
+    <div class="col50 colright">
+      <div class="wd100">
+        {{form.NumeroCertificado.label}}
+        {{form.NumeroCertificado}}
+      </div>
+    </div>
+
+    <div class="col50 colleft">
+      <div class="wd100">
+        {{form.Observaciones.label}}
+        {{form.Observaciones}}
+      </div>
+    </div>
+
+    <div class="col50 colright">
+      <div class="wd100">
+
+        {{form.estatus.label}}
+        {{form.estatus}}
+      </div>
+    </div>
+   
+    <div class="wd100">
+      <input type="submit" name="Submit">
+    </div>
+  </form>
+</div>
+</form>
+
+
+{{form.errors}}
+{% endblock %}
+

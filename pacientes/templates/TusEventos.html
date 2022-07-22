@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+<h2>Tus Eventos Formativos</h2>
+
+<h5>{{paciente_count}} {% if paciente_count == 1 %} Paciente {% else %} Pacientes {% endif %}</h5>
+
+{% for registropaciente in pacientes %}
+<div>
+    {{registropaciente.id}} -- <a href="{% url 'Propuesta' registropaciente.id %}">{{registropaciente.NombrePaciente}}</a>
+    <hr>
+</div>
+{% endfor %}
+
+
+{% endblock %}
