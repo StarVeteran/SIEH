@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h2>Datos de Pacientes</h2>
+
+<h5>{{paciente_count}} Pacientes</h5>
+
+{% for propuesta in Propuestas %}
+<div>
+    {{registropacientes.id}} -- <a href="{% url 'actualizarEstatus' registropacientes.id %}">{{registropacientes.Expediente}}</a>
+
+    <hr>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">  
+    <form class="contact" action="" method="post">
+      <h1>Paciente</h1> 
+      
+      <div class="col50 colleft">
+        <div class="col50 colleft">
+          <div class="wd50">
+            <p><h3>Expediente:</h3></p>
+<p>{{paciente.Expediente}}</p>
+</div>
+<div class="wd50">
+<h2>Numero de cuenta:  </h2>
+<p>{{paciente.NumeroCuenta}}</p>
+<h3>Nombre del paciente:</h3>
+<p>{{paciente.NombrePaciente}}</p>
+<h3>Tipo de ingreso:</h3>
+<p>{{paciente.TipoIngreso}}</p>
+<h3>Tipo Paciente:</h3>
+<p>{{paciente.TipoPaciente}} </p>
+<h3>Medico Tratante: </h3>
+<p>{{paciente.MedicoTratante}}</p>
+<h3>Anestesiologo</h3>
+<p>{{paciente.MedicoAnestesiologo}}</p>
+<h3>Cirugia: </h3>
+<p>{{paciente.Cirugia}}</p>
+<h3>Dias de estancia</h3>
+<p>{{paciente.DiasEstancia}}</p>
+<h3>Fecha de Ingreso</h3>
+<p>{{paciente.FechaIngreso}}</p>
+<h3>Fecha de Egreso</h3>
+<p>{{paciente.FechaEgreso}}</p>
+
+{% if request.user.rol == 'RESPONSABLE' %}
+    <a href="{% url 'ArchivoClinico' %}"> Regresar a Pacientes</a>
+{% elif request.user.rol != 'PARTICIPANTE' and request.user.is_superuser %}
+    <a href="{% url 'AllPropuestas' %}">Regresar a Propuestas</a>
+{% else %}
+    <a href="{% url 'AllEventos' %}">Regresar a Eventos</a>
+{% endif %}
+
+{% endblock %}

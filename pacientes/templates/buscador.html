@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+
+    <center>
+        {% if buscar %}
+            <h1>Buscar Paciente {{ buscar }}</h1>
+            <br/>
+            {% for registropacientes in pacientes %}
+            <a href="{% url 'DatosPaciente' registropacientes.id %}">
+             {{ registropacientes.Expediente  }} - {{ registropacientes.NombrePaciente  }} - {{ registropacientes.sexo  }} <br/> 
+              
+            {% endfor %}
+        {% else %}
+            <h1>¿Buscaras al paciente?</h1>
+        {% endif %}
+
+
+    </center>
+ {% endblock %}   
